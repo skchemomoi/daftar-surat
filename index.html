@@ -100,21 +100,22 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
 
-    <!-- Top Navigation Bar -->
+<!-- Top Navigation Bar (Responsif Telefon & Desktop) -->
     <header class="no-print bg-slate-900 text-white shadow-md sticky top-0 z-30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-sky-500 p-2 rounded-lg text-white">
-                    <i class="fa-solid fa-envelope-open-text text-xl"></i>
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-0 sm:h-16 flex items-center justify-between gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+                <div class="bg-sky-500 p-2 rounded-lg text-white shrink-0">
+                    <i class="fa-solid fa-envelope-open-text text-base sm:text-xl"></i>
                 </div>
-                <div>
-                    <h1 class="font-bold text-lg leading-tight">Sistem Daftar Surat Sekolah</h1>
-                    <p class="text-xs text-slate-400">Pengurusan Rekod Surat Masuk & Keluar &bull; Supabase Live</p>
+                <div class="truncate">
+                    <h1 class="font-bold text-sm sm:text-lg leading-tight truncate">Sistem Daftar Surat</h1>
+                    <p class="text-[11px] sm:text-xs text-slate-400 hidden xs:block">Rekod Surat &bull; Supabase Live</p>
                 </div>
             </div>
-            <div class="flex items-center space-x-2">
-                <button onclick="window.print()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-lg text-sm font-medium flex items-center shadow-sm transition">
-                    <i class="fa-solid fa-print mr-2"></i> Cetak Hujung Bulan (Landscape)
+            <div class="flex items-center shrink-0">
+                <button onclick="window.print()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg text-xs sm:text-sm font-medium flex items-center shadow-sm transition" title="Cetak Hujung Bulan">
+                    <i class="fa-solid fa-print sm:mr-2"></i>
+                    <span class="hidden sm:inline">Cetak Hujung Bulan (Landscape)</span>
                 </button>
             </div>
         </div>
